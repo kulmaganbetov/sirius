@@ -39,7 +39,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-lg shadow-sm border-b border-gray-100"
+          ? "bg-surface-900/90 backdrop-blur-lg shadow-lg shadow-black/20 border-b border-surface-600"
           : "bg-transparent"
       }`}
     >
@@ -47,14 +47,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">S</span>
             </div>
             <div>
-              <span className="text-xl font-heading font-bold text-dark">
+              <span className="text-xl font-heading font-bold text-white">
                 Sirius
               </span>
-              <span className="text-xl font-heading font-bold text-primary-600">
+              <span className="text-xl font-heading font-bold text-primary-400">
                 Lab
               </span>
             </div>
@@ -68,7 +68,7 @@ export default function Header() {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50">
+              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-300 hover:text-primary-300 transition-colors rounded-lg hover:bg-surface-600">
                 Услуги
                 <ChevronDown
                   size={16}
@@ -84,13 +84,13 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+                    className="absolute top-full left-0 mt-1 w-64 bg-surface-700 rounded-xl shadow-xl shadow-black/30 border border-surface-500 overflow-hidden"
                   >
                     {services.map((service) => (
                       <a
                         key={service.name}
                         href={service.href}
-                        className="block px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                        className="block px-4 py-3 text-sm text-gray-300 hover:bg-primary-500/10 hover:text-primary-300 transition-colors"
                       >
                         {service.name}
                       </a>
@@ -104,7 +104,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors rounded-lg hover:bg-gray-50"
+                className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-primary-300 transition-colors rounded-lg hover:bg-surface-600"
               >
                 {item.name}
               </a>
@@ -115,7 +115,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:+77000200959"
-              className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-primary-300 transition-colors"
             >
               <Phone size={18} />
               +7 (700) 020-09-59
@@ -127,7 +127,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-gray-700"
+            className="lg:hidden p-2 text-gray-300"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Меню"
           >
@@ -143,11 +143,11 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
+            className="lg:hidden bg-surface-800 border-t border-surface-600 overflow-hidden"
           >
             <div className="container-custom py-4 space-y-1">
-              <div className="pb-2 mb-2 border-b border-gray-100">
-                <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+              <div className="pb-2 mb-2 border-b border-surface-600">
+                <p className="px-4 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wider">
                   Услуги
                 </p>
                 {services.map((service) => (
@@ -155,7 +155,7 @@ export default function Header() {
                     key={service.name}
                     href={service.href}
                     onClick={() => setIsMobileOpen(false)}
-                    className="block px-4 py-2 text-sm text-gray-600 hover:text-primary-600"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:text-primary-300"
                   >
                     {service.name}
                   </a>
@@ -166,7 +166,7 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileOpen(false)}
-                  className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg"
+                  className="block px-4 py-3 text-base font-medium text-gray-300 hover:text-primary-300 hover:bg-surface-600 rounded-lg"
                 >
                   {item.name}
                 </a>
@@ -174,7 +174,7 @@ export default function Header() {
               <div className="pt-4 space-y-3">
                 <a
                   href="tel:+77000200959"
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-300"
                 >
                   <Phone size={18} />
                   +7 (700) 020-09-59

@@ -18,13 +18,13 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-surface-900 text-gray-400 border-t border-surface-600">
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">S</span>
               </div>
               <div>
@@ -36,11 +36,11 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+            <p className="text-sm text-gray-500 mb-4 leading-relaxed">
               Официальный партнер МойСклад, amoCRM и Bitrix24 в Казахстане.
               Автоматизируем бизнес-процессы с 2019 года.
             </p>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-600">
               ТОО &laquo;Sirius Solutions Lab&raquo;
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-gray-500 hover:text-primary-300 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -70,7 +70,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-gray-500 hover:text-primary-300 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+77000200959"
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-300 transition-colors"
                 >
                   <Phone size={16} />
                   +7 (700) 020-09-59
@@ -95,14 +95,14 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@siriuslab.kz"
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-300 transition-colors"
                 >
                   <Mail size={16} />
                   info@siriuslab.kz
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-2 text-sm text-gray-400">
+                <div className="flex items-start gap-2 text-sm text-gray-500">
                   <MapPin size={16} className="flex-shrink-0 mt-0.5" />
                   Республика Казахстан, г. Алматы
                 </div>
@@ -115,7 +115,7 @@ export default function Footer() {
                 href="https://instagram.com/siriuslab.kz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all"
+                className="w-10 h-10 bg-surface-700 rounded-lg flex items-center justify-center text-gray-500 hover:bg-primary-500 hover:text-white transition-all"
                 aria-label="Instagram"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -126,7 +126,7 @@ export default function Footer() {
                 href="https://wa.me/77000200959"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-green-500 hover:text-white transition-all"
+                className="w-10 h-10 bg-surface-700 rounded-lg flex items-center justify-center text-gray-500 hover:bg-green-500 hover:text-white transition-all"
                 aria-label="WhatsApp"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -138,21 +138,21 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
+        <div className="mt-12 pt-8 border-t border-surface-600 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-gray-600">
             &copy; {new Date().getFullYear()} Sirius Solutions Lab. Все права
             защищены.
           </p>
           <div className="flex gap-6">
             <a
               href="#"
-              className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+              className="text-xs text-gray-600 hover:text-gray-400 transition-colors"
             >
               Политика конфиденциальности
             </a>
             <a
               href="#"
-              className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+              className="text-xs text-gray-600 hover:text-gray-400 transition-colors"
             >
               Оферта
             </a>
