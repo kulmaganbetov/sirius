@@ -16,17 +16,17 @@ export default function WhatsAppWidget() {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="mb-4 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden w-80"
+            className="mb-4 bg-surface-700 rounded-2xl shadow-2xl shadow-black/40 border border-surface-500 overflow-hidden w-80"
           >
-            <div className="bg-green-500 p-4 text-white">
+            <div className="bg-green-600 p-4 text-white">
               <h3 className="font-semibold text-lg">Sirius Solutions Lab</h3>
               <p className="text-sm text-green-100">
                 Обычно отвечаем в течение 30 минут
               </p>
             </div>
             <div className="p-4">
-              <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                <p className="text-sm text-gray-700">
+              <div className="bg-surface-600 rounded-lg p-3 mb-4">
+                <p className="text-sm text-gray-300">
                   Здравствуйте! Чем можем помочь? Напишите нам, и мы ответим в
                   ближайшее время.
                 </p>
@@ -37,7 +37,7 @@ export default function WhatsAppWidget() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-green-500 text-white text-center py-3 rounded-lg font-medium hover:bg-green-600 transition-colors"
+                className="block w-full bg-green-500 text-white text-center py-3 rounded-lg font-medium hover:bg-green-400 transition-colors"
               >
                 Начать чат в WhatsApp
               </a>
@@ -50,7 +50,7 @@ export default function WhatsAppWidget() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-colors"
+        className="w-14 h-14 bg-green-500 text-white rounded-full shadow-lg shadow-green-500/30 flex items-center justify-center hover:bg-green-400 transition-colors"
         aria-label="Открыть WhatsApp чат"
       >
         {isOpen ? <X size={24} /> : <MessageCircle size={24} />}

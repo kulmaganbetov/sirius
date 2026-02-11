@@ -1,31 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
+  /* Dark night palette */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #c7d2fe;
+  --color-primary-200: #a5b4fc;
+  --color-primary-300: #818cf8;
+  --color-primary-400: #6366f1;
+  --color-primary-500: #4f46e5;
+  --color-primary-600: #4338ca;
+  --color-primary-700: #3730a3;
+  --color-primary-800: #312e81;
+  --color-primary-900: #1e1b4b;
+  --color-primary-950: #0f0e2a;
 
-  --color-accent-50: #fffbeb;
-  --color-accent-100: #fef3c7;
-  --color-accent-200: #fde68a;
-  --color-accent-300: #fcd34d;
-  --color-accent-400: #fbbf24;
-  --color-accent-500: #f59e0b;
-  --color-accent-600: #d97706;
-  --color-accent-700: #b45309;
-  --color-accent-800: #92400e;
-  --color-accent-900: #78350f;
+  --color-accent-50: #ecfdf5;
+  --color-accent-100: #d1fae5;
+  --color-accent-200: #a7f3d0;
+  --color-accent-300: #6ee7b7;
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+  --color-accent-700: #047857;
+  --color-accent-800: #065f46;
+  --color-accent-900: #064e3b;
 
-  --color-dark: #1f2937;
-  --color-light: #f9fafb;
+  /* Surface colors for dark theme */
+  --color-surface-900: #0a0a0f;
+  --color-surface-800: #0f1019;
+  --color-surface-700: #151725;
+  --color-surface-600: #1a1d2e;
+  --color-surface-500: #212538;
+  --color-surface-400: #2a2f45;
+  --color-surface-300: #363c56;
+  --color-surface-200: #464d6a;
+  --color-surface-100: #6b7299;
+  --color-surface-50: #9398b5;
+
+  --color-dark: #e2e8f0;
+  --color-light: #0a0a0f;
 
   --font-sans: "Inter", system-ui, sans-serif;
   --font-heading: "Manrope", system-ui, sans-serif;
@@ -50,8 +63,8 @@
   }
 
   body {
-    color: var(--color-dark);
-    background-color: white;
+    color: #e2e8f0;
+    background-color: #0a0a0f;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -93,7 +106,7 @@
   }
 
   .gradient-text {
-    background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-800));
+    background: linear-gradient(to right, #818cf8, #6366f1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
